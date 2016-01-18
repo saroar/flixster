@@ -8,6 +8,10 @@ Rails.application.routes.draw do
 
   devise_for :users
 
+  namespace :instructor do
+    resources :courses, only: %i(new create show)
+  end
+
   resources :static_pages, only: %i(index)
 
   root to: "static_pages#index"

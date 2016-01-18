@@ -1,0 +1,18 @@
+p#notice = notice
+
+p
+  strong Title:
+  = @course.title
+p
+  strong Description:
+  = @course.description
+p
+  strong Cost:
+  = @course.cost
+p
+  strong User:
+  = @course.user_id
+
+= link_to 'Edit', edit_course_path(@course)
+'|
+= link_to 'Back', courses_path
