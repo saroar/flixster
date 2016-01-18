@@ -8,5 +8,7 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  root to: 'visitors#index'
+  resources :static_pages, only: %i(index)
+
+  root to: "static_pages#index"
 end
